@@ -1,26 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Hello from './component/Hello';
+import Hello2 from './component/Hello2';
+import Counter from './component/Counter';
+import { TodoProvider } from './context/TodoContext';
+import TodoComponent from './component/TodoComponent';
 
-function App() {
+const App = () => {
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Hello name={'dongubak'} />
+      <Hello2 name={'dongubak'}></Hello2>
+      <Counter></Counter>
+      <TodoProvider>
+        <TodoComponent></TodoComponent>
+      </TodoProvider>
+    </>
   );
 }
+
 
 export default App;
